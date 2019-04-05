@@ -8,15 +8,16 @@ general {
 		color_bad = '#ba5e57'
 }
 
-order += "load"
-order += "cpu_temperature 0"
-order += "disk /"
-order += "disk /home"
-order += "ethernet enp1s0"
-order += "wireless wlp2s0"
-order += "volume master"
-order += "battery 1"
-order += "tztime local"
+#order += "load"
+#order += "cpu_temperature 0"
+#order += "disk /"
+#order += "disk /home"
+order += "ethernet eth0"
+order += "wireless wlan0"
+#order += "tunnel tun0"
+#order += "volume master"
+#order += "battery 1"
+#order += "tztime local"
 
 load {
         format = "<span background='#f59335'>  %5min Load </span>"
@@ -35,15 +36,20 @@ disk "/home" {
         format = "<span background='#a1d569'>  %free Free </span>"
 }
 
-ethernet enp1s0 {
-        format_up = "<span background='#88c0d0'>  %ip </span>"
-        format_down = "<span background='#88c0d0'>  Disconnected </span>"
+ethernet eth0 {
+        format_up = "<span background='#88c0d0'> eth0 %ip </span>"
+        format_down = "<span background='#88c0d0'> eth0 down </span>"
 }
 
-wireless wlp2s0 {
-        format_up = "<span background='#b48ead'>  %essid </span>"
+wireless wlan0 {
+        format_up = "<span background='#b48ead'>  %ip </span>"
         format_down = "<span background='#b48ead'>  Disconnected </span>"
 }
+
+#tunnel tun0 {
+#        format_up = "<span background='#b48ead'> tun0 %ip </span>"
+#        format_down = "<span background='#b48ead'> tun0 down </span>"
+#}
 
 volume master {
         format = "<span background='#ebcb8b'>  %volume </span>"

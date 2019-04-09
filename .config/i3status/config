@@ -17,7 +17,7 @@ order += "wireless wlp2s0"
 #order += "tunnel tun0"
 order += "volume master"
 #order += "battery 1"
-#order += "tztime local
+order += "tztime local
 
 
 
@@ -61,5 +61,5 @@ volume master {
 
 tztime local {
 		format = "<span background='#8be9fd'>  </span><span background='#e5e9f0'> %time </span>"
-		format_time = "%a %-d %b %H:%M"
+		format_time = "%H:%M"
 }

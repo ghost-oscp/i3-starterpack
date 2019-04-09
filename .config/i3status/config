@@ -17,7 +17,7 @@ order += "wireless wlp2s0"
 #order += "tunnel tun0"
 order += "volume master"
 #order += "battery 1"
-order += "tztime local
+order += "tztime local"
 
 
 
